@@ -80,7 +80,7 @@ export default function Portfolio() {
               <p className="text-xs text-blue-400 mt-3">{p.tech}</p>
 
               <div className="mt-5 flex gap-4 text-sm">
-                <a href="#" className="underline hover:text-blue-400">GitHub</a>
+                <a href={p.github} target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400">GitHub</a>
                 
               </div>
             </motion.div>
@@ -168,42 +168,50 @@ const projects = [
     title: "MentApp",
     description: "Real-time emotion recognition system combining facial analysis and NLP to understand user sentiment.",
     tech: "TensorFlow • PyTorch • OpenCV • Transformers",
+    github: "https://github.com/aquibgit/mentapp"
   },
   {
     title: "E-Market",
     description: "Full-featured e-commerce platform with scalable architecture, analytics, and secure transactions.",
     tech: "Django • SQL • Bootstrap",
+    github: "https://github.com/aquibgit/e-market"
   },
   {
     title: "MediPlus",
     description: "Healthcare system enabling efficient doctor-patient interaction and appointment management.",
     tech: "Django • MySQL",
+    github: "https://github.com/aquibgit/mediplus"
   },
   {
     title: "Villa Project",
     description: "Real estate management system with structured listing and approval workflows.",
     tech: "Django",
+    github: "https://github.com/aquibgit/villa-project"
   },
   {
     title: "CV Matcher",
     description: "NLP-based system that matches resumes to job descriptions with intelligent scoring.",
     tech: "Python • NLP",
+    github: "https://github.com/aquibgit/cv-matcher"
   },
   {
     title: "CV Anonymizer",
     description: "Automated anonymization tool to remove bias in recruitment processes.",
     tech: "Python • NLP",
+    github: "https://github.com/aquibgit/cv-anonymizer"
   },
   {
     title: "Task Manager",
     description: "Clean and efficient task tracking system with full CRUD operations.",
     tech: "Django • JavaScript",
+    github: "https://github.com/aquibgit/task-manager"
   },
   {
     title: "Smart Canteen",
     description: "Digital ordering system designed to improve efficiency and reduce wait times.",
     tech: "Django",
-  },
+    github: "https://github.com/aquibgit/smart-canteen"
+  }
 ];
 
 const skills = [
