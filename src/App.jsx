@@ -57,7 +57,7 @@ export default function Portfolio() {
 
       {/* Projects */}
       <section id="projects" className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold mb-14">Project Works</h2>
+        <h2 className="text-4xl font-bold mb-14">Selected Work</h2>
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((p, i) => (
@@ -81,7 +81,7 @@ export default function Portfolio() {
 
               <div className="mt-5 flex gap-4 text-sm">
                 <a href="#" className="underline hover:text-blue-400">GitHub</a>
-                <a href="#" className="underline hover:text-blue-400">Live</a>
+                
               </div>
             </motion.div>
           ))}
@@ -157,7 +157,7 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer className="text-center text-gray-500 text-sm py-10 border-t border-white/5">
-        © {new Date().getFullYear()} Aquib Ummer Raof
+        © {new Date().getFullYear()} Aquib Ummer Raof — Built with precision
       </footer>
     </div>
   );
