@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
+import { Analytics } from "@vercel/analytics/react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
