@@ -52,33 +52,63 @@ export default function Portfolio() {
       </nav>
 
       {/* Hero */}
-      <section className="text-center py-28">
-        <motion.div variants={fadeUp} initial="hidden" animate="show">
+<section className="max-w-4xl mx-auto px-6 py-28 grid md:grid-cols-[auto_1fr] gap-12 md:gap-12 items-center"> 
+  
+   {/* Left: Photo */}
+  <motion.div
+    variants={fadeUp}
+    initial="hidden"
+    animate="show"
+    className="flex justify-center md:justify-start"
+  >
+    <div className="relative w-44 h-44 md:w-48 md:h-48">
 
-          <img
-            src="/profile.jpg"
-            className="mx-auto w-36 h-36 rounded-full border border-white/10 shadow-2xl mb-6"
-          />
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-blue-500 to-purple-500 blur-2xl opacity-30"></div>
 
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
-            Aquib Ummer Raof
-          </h1>
+      <img
+        src="/profile.jpg"
+        alt="Aquib"
+        className="relative w-full h-full object-cover rounded-2xl 
+                   border border-white/10 shadow-2xl"
+      />
+    </div>
+  </motion.div>
 
-          <p className="mt-6 text-gray-400 text-lg">
-            AI/ML Engineer • Python Full Stack Developer • Problem Solver
-          </p>
+  {/* Right: Text */}
+  <motion.div
+    variants={fadeUp}
+    initial="hidden"
+    animate="show"
+    className="text-center md:text-left max-w-xl"
+  >
 
-          <div className="mt-10 flex justify-center gap-4">
-            <a href="#projects" className="bg-blue-600 px-6 py-3 rounded-xl hover:bg-blue-500 transition">
-              Explore Work
-            </a>
-            <a href="/resume.pdf" download className="border px-6 py-3 rounded-xl hover:bg-white hover:text-black transition">
-              Resume
-            </a>
-          </div>
-        </motion.div>
-      </section>
+    <h1 className="text-4xl md:text-5xl font-bold 
+                   bg-gradient-to-r from-white to-blue-400 
+                   bg-clip-text text-transparent whitespace-nowrap">
+      Aquib Ummer Raof
+    </h1>
 
+    <p className="mt-5 text-gray-400 text-lg">
+      AI/ML Engineer • Python Full Stack Developer
+    </p>
+
+    <p className="mt-4 text-gray-500">
+      I build intelligent systems combining machine learning with scalable web applications, focusing on real-world problem solving and impactful solutions.
+    </p>
+
+    <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+      <a href="#projects" className="bg-blue-600 px-6 py-3 rounded-xl">
+        Explore Work
+      </a>
+
+      <a href="/resume.pdf" className="border border-white/10 px-6 py-3 rounded-xl">
+        Resume
+      </a>
+    </div>
+
+  </motion.div>
+
+</section>
       {/* Projects */}
       <section id="projects" className="max-w-6xl mx-auto px-6 py-20">
         <h2 className="text-4xl font-bold mb-14">Project Works</h2>
@@ -148,37 +178,84 @@ export default function Portfolio() {
       {/* Contact */}
       <section id="contact" className="max-w-5xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10">
 
-        <div>
-          <h2 className="text-4xl font-bold mb-6">Contact</h2>
+  {/* Contact Info Card */}
+  <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-xl">
 
-          <p className="text-gray-400 mb-6">
-            Open to opportunities and collaborations.
-          </p>
+    <h2 className="text-3xl font-bold mb-6">Contact</h2>
 
-          <p>Email: aquiburaof123@gmail.com</p>
-          <p>Phone: +91 9497277196</p>
+    <p className="text-gray-400 mb-6">
+      Open to opportunities and collaborations.
+    </p>
 
-          <div className="mt-6 flex gap-4">
-            <a href="https://www.linkedin.com/in/aquib-ummer-raof-python-developer" target="_blank" className="bg-blue-600 px-4 py-2 rounded-lg">
-              LinkedIn
-            </a>
-            <a href="https://github.com/aquibgit" target="_blank" className="border px-4 py-2 rounded-lg">
-              GitHub
-            </a>
-          </div>
-        </div>
+    <div className="space-y-3 text-gray-300">
+      <p>Email: aquiburaof123@gmail.com</p>
+      <p>Phone: +91 9497277196</p>
+      <p>Location: Kozhikode, Kerala</p>
+    </div>
 
-        <form
-          action="https://formsubmit.co/aquiburaof123@gmail.com"
-          method="POST"
-          className="space-y-4 bg-white/5 border border-white/10 p-6 rounded-2xl"
-        >
-          <input name="name" placeholder="Name" required className="w-full p-3 bg-black/40 border rounded-lg" />
-          <input type="email" name="email" placeholder="Email" required className="w-full p-3 bg-black/40 border rounded-lg" />
-          <textarea name="message" rows="5" placeholder="Message" required className="w-full p-3 bg-black/40 border rounded-lg" />
-          <button className="w-full bg-blue-600 py-3 rounded-xl">Send Message</button>
-        </form>
-      </section>
+    <div className="mt-6 flex gap-4">
+      <a
+        href="https://www.linkedin.com/in/aquib-ummer-raof-python-developer"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-500 transition"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="https://github.com/aquibgit"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="border border-white/10 px-4 py-2 rounded-lg hover:bg-white hover:text-black transition"
+      >
+        GitHub
+      </a>
+    </div>
+
+  </div>
+
+  {/* Form Card */}
+  <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-xl">
+
+    <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
+
+    <form
+      action="https://formsubmit.co/aquiburaof123@gmail.com"
+      method="POST"
+      className="space-y-4"
+    >
+      <input
+        name="name"
+        placeholder="Your Name"
+        required
+        className="w-full p-3 bg-black/40 border border-white/10 rounded-lg"
+      />
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+        className="w-full p-3 bg-black/40 border border-white/10 rounded-lg"
+      />
+
+      <textarea
+        name="message"
+        rows="5"
+        placeholder="Your Message"
+        required
+        className="w-full p-3 bg-black/40 border border-white/10 rounded-lg"
+      />
+
+      <button className="w-full bg-blue-600 py-3 rounded-xl hover:bg-blue-500 transition">
+        Send Message
+      </button>
+    </form>
+
+  </div>
+
+</section>
 
       {/* Footer */}
       <footer className="text-center text-gray-500 py-10 border-t border-white/5">
