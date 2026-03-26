@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
+import { Analytics } from '@vercel/analytics/react';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -261,6 +262,7 @@ export default function Portfolio() {
       <footer className="text-center text-gray-500 py-10 border-t border-white/5">
         © {new Date().getFullYear()} Aquib Ummer Raof
       </footer>
+      <Analytics />
     </div>
   );
 }
