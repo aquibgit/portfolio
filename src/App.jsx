@@ -138,22 +138,35 @@ export default function Portfolio() {
 
               <p className="text-blue-400 text-xs mt-3">{p.tech}</p>
 
-              <div className="mt-5">
-                {p.github && (
-                  <a
-                    href={p.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 border border-white/10 rounded-lg 
-                               hover:bg-white hover:text-black 
-                               hover:shadow-lg hover:shadow-blue-500/20 
-                               transition-all duration-300"
-                  >
-                    <FaGithub />
-                    GitHub
-                  </a>
-                )}
-              </div>
+              <div className="mt-5 flex gap-3">
+
+  {p.github && (
+    <a
+      href={p.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 px-4 py-2 border border-white/10 rounded-lg 
+                 hover:bg-white hover:text-black 
+                 transition-all duration-300"
+    >
+      <FaGithub />
+      GitHub
+    </a>
+  )}
+
+  {p.live && (
+    <a
+      href={p.live}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center px-4 py-2 bg-blue-600 rounded-lg 
+                 hover:bg-blue-500 transition"
+    >
+      Live
+    </a>
+  )}
+
+</div>
             </motion.div>
           ))}
         </div>
@@ -275,14 +288,13 @@ const projects = [
       "TensorFlow • PyTorch • OpenCV • Transformers • CNN",
     github: null
   },
-  {
-    title: "E-Market",
-    description:
-      "A full-stack e-commerce platform featuring product management, user authentication, cart functionality, and order processing. Designed with a scalable backend and dynamic UI for real-world online shopping workflows.",
-    tech:
-      "Django • MySQL • HTML • CSS • JavaScript • Bootstrap",
-    github: "https://github.com/aquibgit/E-marketing"
-  },
+{
+  title: "E-Market",
+  description: "A full-stack e-commerce platform deployed in aws featuring product management, authentication, cart, and order processing.",
+  tech: "Django • MySQL • HTML • CSS • JavaScript • AWS",
+  github: "https://github.com/aquibgit/E-marketing",
+  live: "http://16.170.254.142/"
+},
   {
     title: "MediPlus",
     description:
